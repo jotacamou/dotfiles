@@ -1,0 +1,90 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "blocks": [
+    {
+      "alignment": "left",
+      "segments": [
+        {
+          "foreground": "#88c0d0",
+          "style": "plain",
+          "template": "<#5e81ac>\u250f[</>{{ .UserName }}<#5e81ac>]</>",
+          "type": "session"
+        },
+        {
+          "type": "gcp",
+          "style": "plain",
+          "foreground": "#b48ead",
+          "template": "<#5e81ac>--[</>{{.Project}}<#5e81ac>/</>{{.Region}}<#5e81ac>]</>"
+        },
+        {
+          "foreground": "#b48ead",
+          "style": "plain",
+          "template": "<#5e81ac>--[</>{{.Profile}}{{if .Region}}@{{.Region}}{{end}}<#5e81ac>]</>",
+          "type": "aws"
+        },
+        {
+          "foreground": "#d8dee9",
+          "style": "plain",
+          "template": "<#5e81ac>[</>\uf0e7<#5e81ac>]</>",
+          "type": "root"
+        },
+        {
+          "foreground": "#d8dee9",
+          "style": "plain",
+          "template": "<#5e81ac>--[x</>{{ reason .Code }}<#5e81ac>]</>",
+          "type": "status"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "foreground": "#88c0d0",
+          "properties": {
+            "style": "full"
+          },
+          "style": "plain",
+          "template": "<#5e81ac>\u2516[</>{{ .Path }}<#5e81ac>]</>",
+          "type": "path"
+        },
+        {
+          "foreground": "#b48ead",
+          "properties": {
+            "branch_icon": "\ue725 ",
+            "fetch_stash_count": true,
+            "fetch_status": true,
+            "fetch_upstream_icon": true,
+            "fetch_worktree_count": true
+          },
+          "style": "plain",
+          "template": "<#5e81ac>--[</>{{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} \ueb4b {{ .StashCount }}{{ end }}<#5e81ac>]</>",
+          "type": "git"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "foreground": "#5e81ac",
+          "style": "plain",
+          "template": "$",
+          "type": "text"
+        }
+      ],
+      "type": "prompt"
+    }
+  ],
+  "console_title_template": "{{ .Folder }}",
+  "transient_prompt": {
+    "template": "$ ",
+    "foreground": "#5e81ac"
+  },
+  "final_space": true,
+  "version": 3
+}
