@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+TF_VER=$(terraform version -json | jq -r .terraform_version)
+
+echo "#[fg=colour220]TF:#[fg=colour99]v${TF_VER}"
