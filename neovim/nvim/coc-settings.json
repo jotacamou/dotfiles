@@ -1,0 +1,36 @@
+{
+  "eslint.enable": true,
+  "eslint.packageManager": "yarn",
+  "eslint.run": "onType",
+  "eslint.autoFixOnSave": false,
+  "colors.enable": true,
+  "coc.preferences.formatOnSave": true,
+  "prettier.disableLanguages": ["yaml"],
+  "tsdetect.doNotCreateOnNode": true,
+  "tsdetect.nodeOverride": {
+    "deno.lint": false,
+    "prettier.disableLanguages": ["yaml"],
+    "eslint.enable": true
+  },
+  "tsdetect.denoOverride": {
+    "deno.lint": true,
+    "prettier.disableLanguages": [
+      "javascript",
+      "javascriptreact",
+      "typescript",
+      "typescriptreact",
+      "yaml"
+    ],
+    "eslint.enable": false
+  },
+  "languageserver": {
+    "terraform": {
+      "command": "terraform-ls",
+      "args": ["serve"],
+      "filetypes": ["terraform", "tf"],
+      "initializationOptions": {},
+      "settings": {}
+    }
+  },
+  "diagnostic.checkCurrentLine": true
+}
