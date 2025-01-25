@@ -10,11 +10,31 @@
 -- * override the configuration of LazyVim plugins
 return {
   -- Configure LazyVim to load a specific colorscheme
+  {
+  "folke/tokyonight.nvim",
+    opts = {
+      transparent = true,
+        styles = {
+        sidebars = "transparent",
+        floats = "transparent",
+      },
+    },
+  },
     {
       "navarasu/onedark.nvim",
       opts = {
-        style = "dark",
+        style = "warm",
+        transparent = true,
+          styles = {
+            sidebars = "transparent",
+            floats = "transparent",
+          },
       },
     },
-
+    {
+      "EdenEast/nightfox.nvim",
+      opts = {
+        transparent = true,
+      },
+    }
 }
