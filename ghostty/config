@@ -1,0 +1,40 @@
+# This is the configuration file for Ghostty.
+#
+
+window-colorspace = display-p3
+window-padding-x = 0
+window-padding-y = 0
+background-opacity = 0.89
+background-blur-radius = 19
+theme = 0x96f
+bold-is-bright = true
+background = #262427
+foreground = #fcfcfa
+selection-background = #fcfcfa
+selection-foreground = #262427
+cursor-color = #fcfcfa
+cursor-text = #000000
+cursor-style-blink = true
+palette = 0=#262427
+palette = 1=#ff7272
+palette = 2=#bcdf59
+palette = 3=#ffca58
+palette = 4=#49cae4
+palette = 5=#a093e2
+palette = 6=#aee8f4
+palette = 7=#fcfcfa
+palette = 8=#545452
+palette = 9=#ff8787
+palette = 10=#c6e472
+palette = 11=#ffd271
+palette = 12=#64d2e8
+palette = 13=#aea3e6
+palette = 14=#baebf6
+palette = 15=#fcfcfa
+font-thicken = true
+font-family = EssentialPragmataPro Nerd Font
+font-style = Regular
+mouse-hide-while-typing = true
+macos-non-native-fullscreen = true
+macos-titlebar-style = hidden
+macos-option-as-alt = true
