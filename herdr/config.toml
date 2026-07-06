@@ -1,0 +1,25 @@
+onboarding = false
+[ui]
+agent_panel_scope = "all"
+show_agent_labels_on_pane_borders = true
+
+[theme]
+name = "vesper"
+
+auto_switch = false
+[keys]
+focus_pane_left = ["prefix+h", "shift+left"]
+focus_pane_down = ["prefix+j", "shift+down"]
+focus_pane_up = ["prefix+k", "shift+up"]
+focus_pane_right = ["prefix+l", "shift+right"]
+
+# Previous / next workspace. Ghostty maps Cmd+K/Cmd+J to these Ctrl+Shift+Arrow
+# sequences (see ~/.config/ghostty/config), since macOS Cmd never reaches herdr.
+previous_workspace = "ctrl+shift+up"
+next_workspace = "ctrl+shift+down"
+
+# tmux-style `prefix + space`: toggle the 2-pane tab between side-by-side and stacked.
+[[keys.command]]
+key = "prefix+space"
+type = "shell"
+command = "/Users/jr/.config/herdr/scripts/toggle-orientation.sh"
